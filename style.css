@@ -1,73 +1,96 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
+
+body {
     font-family: Arial, sans-serif;
-    background: #e0eafc;
+    background: linear-gradient(135deg, #e0eafc, #cfdef3); 
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
+    padding: 20px;
 }
-nav{
+
+nav {
     width: 90%; 
     max-width: 400px;
     position: absolute;
     top: 20px;
-    background: #ffffffaa;
-    padding: 10px 20px;
-    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 10;
 }
-.container{
-    background: #ffffffcc;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    text-align: center;
+
+.search_box {
+    display: flex;
+    gap: 10px;
 }
-.weather_container .temp{
-    font-size: 64px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-.weather_container .condition{
-    font-size: 24px;
-    color: #555;
-}
-.search_area{
-    padding: 8px;
+
+.search_area {
+    flex: 1; 
+    padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 4px;
-    width: 200px;
-    margin-right: 10px;
+    border-radius: 6px;
+    outline: none;
 }
-button{
-    padding: 8px 16px;
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 350px;
+    margin-top: 60px; 
+}
+
+.weather_container .temp {
+    font-size: 72px;
+    font-weight: bold;
+    color: #333;
+}
+
+.time_location {
+    font-size: 18px;
+    color: #666;
+    margin: 10px 0 20px;
+}
+
+.condition {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    gap: 10px;
+}
+
+.image {
+    width: 120px;  
+    height: 120px;
+    object-fit: contain;
+}
+
+.condition p {
+    font-size: 24px;
+    color: #444;
+    text-transform: capitalize;
+}
+
+button {
+    padding: 10px 20px;
     border: none;
     background: #007BFF;
     color: white;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
+    transition: background 0.3s;
 }
-button:hover{
+
+button:hover {
     background: #0056b3;
-}
-.image{
-   width: 100px;  
-    height: 100px;
-    object-fit: contain;
-}
-.time_location{
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-.condition p{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    font-size: 24px;
 }
