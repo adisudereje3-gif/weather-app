@@ -1,11 +1,10 @@
 const searchInput = document.querySelector(".search_area");
-const searchBtn = document.querySelector("button");
+const searchBtn = document.querySelector(".search_btn"); 
 const weatherIcon = document.querySelector(".image");
-const weatherCondition = document.querySelector(".condition p:nth-child(2)");
+const weatherCondition = document.querySelector(".condition p"); 
 const tempElement = document.querySelector(".temp p");
 const cityElement = document.querySelector(".time_location p:nth-child(1)");
 const dateElement = document.querySelector(".time_location p:nth-child(2)");
-
 
 const apiKey = "d59870497cd64066a1b203444252412";
 
@@ -25,12 +24,9 @@ async function checkWeather(city) {
         tempElement.innerHTML = Math.round(data.current.temp_c) + "°C";
         weatherCondition.innerHTML = data.current.condition.text;
         
+        
         const iconUrl = data.current.condition.icon;
         weatherIcon.src = "https:" + iconUrl;
-
-        
-        weatherIcon.style.width = "100px";
-        weatherIcon.style.height = "100px";
 
     } catch (error) {
         console.error("Error fetching weather data:", error);
@@ -43,5 +39,6 @@ searchBtn.addEventListener("click", (e) => {
         checkWeather(searchInput.value);
     }
 });
+
 
 checkWeather("Addis Ababa");
