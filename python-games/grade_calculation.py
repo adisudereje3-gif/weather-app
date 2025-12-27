@@ -1,5 +1,5 @@
 print("\n\n Welcome to BDU Students Grading  system  ")
-print(" Students result press -1 to exit from the program  ")
+print(" Press -1 to exit from the program  ")
 while True:
     user_input = input("\nplease enter your result (0-100) ")
     score = float(user_input)
@@ -30,3 +30,4 @@ while True:
     else:
         print("I'm sorry🥲  you scored: F")
         print("You are failed😭😭😭")
+
